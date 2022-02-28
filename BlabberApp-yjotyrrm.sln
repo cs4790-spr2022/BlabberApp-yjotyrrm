@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStore", "DataStore\Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStoreTest", "DataStoreTest\DataStoreTest.csproj", "{78E9C47C-6102-4995-9C72-973D284B0360}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{4828A3AF-6FF4-44B8-BA1C-79D2A979FFF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{78E9C47C-6102-4995-9C72-973D284B0360}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78E9C47C-6102-4995-9C72-973D284B0360}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78E9C47C-6102-4995-9C72-973D284B0360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4828A3AF-6FF4-44B8-BA1C-79D2A979FFF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4828A3AF-6FF4-44B8-BA1C-79D2A979FFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4828A3AF-6FF4-44B8-BA1C-79D2A979FFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4828A3AF-6FF4-44B8-BA1C-79D2A979FFF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

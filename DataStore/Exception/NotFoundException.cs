@@ -1,8 +1,7 @@
-namespace DataStore.Exceptions;
-
-using System;
-
-public class NotFoundException : Exception
+namespace DataStore.Exceptions
 {
-    public NotFoundException(string message) : base(message) { }
+    public class NotFoundException : Exception
+    {
+        public NotFoundException(string message) : base(message) { }
+    }
 }
