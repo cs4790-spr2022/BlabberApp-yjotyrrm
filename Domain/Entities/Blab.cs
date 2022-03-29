@@ -7,18 +7,12 @@ namespace Domain.Entities
     {
         public string? Content { get; set; }
 
-        public User User { get; set; }
+        public string User { get; set; }
 
-        public DateTime CreatedDttm { get; }
-
-        private Guid Id;
-
-        public Blab(User _user, string _Content)
+        public Blab(string _user, string _Content)
         {
-            User = _user;
-            Id = Guid.NewGuid();
+            User =  _user;
             Content = _Content;
-            CreatedDttm = DateTime.UtcNow;
         }
 
         public Guid GetId()

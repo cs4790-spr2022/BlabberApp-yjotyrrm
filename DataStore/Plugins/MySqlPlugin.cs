@@ -3,27 +3,33 @@
 
     public class MySqlPlugin
     {
-        private MySql.Data.MySqlClient.MySqlConnection? conn;
+        public readonly MySql.Data.MySqlClient.MySqlConnection Conn;
         private string connectionString; //Also know as DSN
 
         public MySqlPlugin(string connStr)
         {
-            this.connectionString = connStr;
+            this.Conn = new MySql.Data.MySqlClient.MySqlConnection(connStr);
         }
 
-        public void Connect()
+        /// <summary>
+        /// opens and closes the connection to ensure we can connect with the conneciton string.
+        /// </summary>
+        public void TestConnection()
         {
             try
             {
-                this.conn = new MySql.Data.MySqlClient.MySqlConnection(
-                    this.connectionString
-                );
-                this.conn.Open();
+                this.Conn.Open();
+                this.Conn.Close();
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public void Dispose()
+        {
+            this.Conn.Close();
         }
     }
 }
