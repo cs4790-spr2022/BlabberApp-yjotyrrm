@@ -28,7 +28,7 @@ namespace DataStoreTest
             //this throws an error if it fails so assert is unnecessary
             try
             {
-                plugin.Connect();
+                plugin.TestConnection();
             } 
             catch(Exception e)
             {
@@ -37,18 +37,12 @@ namespace DataStoreTest
             
         }
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "System.ArgumentException: Format of the initialization string does not conform to specification starting at index 0.")]
         public void TestConnectWithBadString()
         {
             string dsn = "fakestring";
             MySqlPlugin plugin = new MySqlPlugin(dsn);
-            try
-            {
-                plugin.Connect();
-            }
-            catch (Exception e)
-            {
-                Assert.AreEqual("Format of the initialization string does not conform to specification starting at index 0.", e.Message);
-            }
+            plugin.TestConnection();
         }
     }
 }

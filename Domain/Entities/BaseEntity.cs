@@ -5,11 +5,11 @@ namespace BlabberApp.Domain.Entities
 
     public abstract class BaseEntity : IEntity
     {
-        public abstract void AreEqual(IEntity entity);
-        public abstract void Validate();
+        public abstract bool AreEqual(IEntity entity);
+        public abstract bool Validate();
         public Guid Id { get; set; }
         public DateTime DttmCreated { get; set; }
-        public DateTime DttmModified { get; set; }
+        public DateTime? DttmModified { get; set; }
 
         /// <summary>
         /// the base entity, handles id and datetime created/modified.  Initializes ID and DttmCreated, so make sure to overwrite those when pulling from DB.
@@ -19,5 +19,7 @@ namespace BlabberApp.Domain.Entities
             this.Id = Guid.NewGuid();
             DttmCreated = DateTime.UtcNow;
         }
+
+
     }
 }

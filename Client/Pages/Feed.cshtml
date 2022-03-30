@@ -1,8 +1,48 @@
 ﻿@page
-@model MyApp.Namespace.FeedModel
+@model FeedModel
 @{
     ViewData["Title"] = "Feed";
 }
 
-
 <h1>Feed</h1>
+<div class="border bg-white">
+    <br/>
+    <div>
+        <table class="table table-striped border">
+            <tr class="table-secondary">
+                <th>@Html.DisplayNameFor(m => m.Blabs[0].Content)</th>
+                <th>@Html.DisplayNameFor(m => m.Blabs[0].DttmCreated)</th>
+                <th>@Html.DisplayNameFor(m => m.Blabs[0].User.Username)</th>
+            </tr>
+            @foreach (var blab in Model.Blabs)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => blab.Content)</td>
+                    <td>@Html.DisplayFor(m => blab.DttmCreated)</td>
+                    <td>@Html.DisplayFor(m => blab.User.Username)</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+<form method="post">
+    <div class="row">
+        <div class="col-6 text-right">
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="form3Example1" class="form-control" asp-for="Message"/>
+                        <label class="form-label" for="form3Example1">Message</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="form3Example2" class="form-control" asp-for="Email"/>
+                        <label class="form-label" for="form3Example2">Email</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block mb-4">Blab It</button>
+</form>

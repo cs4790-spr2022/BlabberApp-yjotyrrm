@@ -83,26 +83,61 @@ namespace DomainTest
 			Assert.IsNotNull(id);
 		}
 
+		[TestMethod]
+		public void TestEqualityDifferentUUIDs()
+        {
+			//these should have different ids, despite having the same data, because each unit generates its own id
+			User u1 = new User("johndoe@gmail.com", "jdoe", "John", "Doe");
+			User u2 = new User("johndoe@gmail.com", "jdoe", "John", "Doe");
+			Assert.IsFalse(u1.AreEqual(u2));
+		}
 
-		//validate is not yet implemented
-		//	[TestMethod]
-		//	public void TestValidate()
-		//	{
+		[DataTestMethod]
+		[DataRow("johndoe@gmail.com", "jdoe", "John", "Doe")]
+		public void TestIsEqual(string email, string username, string firstName, string lastName)
+		{
+			//we will manually set the Ids to be the same to test the rest of the isEqual functionality
+			User u1 = new User("johndoe@gmail.com", "jdoe", "John", "Doe");
+			User u2 = new User(email, username, firstName, lastName);
+			{ u2.Id = u1.Id; }
+			Assert.IsTrue(u1.AreEqual(u2));
+		}
+		//data rows to check each individual item that could be different.
+		[DataTestMethod]
+		[DataRow("notjohndoe@gmail.com", "jdoe", "John", "Doe")]
+		[DataRow("johndoe@gmail.com", "notjdoe", "John", "Doe")]
+		[DataRow("johndoe@gmail.com", "jdoe", "notJohn", "Doe")]
+		[DataRow("johndoe@gmail.com", "jdoe", "John", "notDoe")]
+		public void TestAreNotEqual(string email, string username, string firstName, string lastName)
+        {
+			//we will manually set the Ids to be the same to test the rest of the isEqual functionality
+			User u1 = new User("johndoe@gmail.com", "jdoe", "John", "Doe");
+			User u2 = new User(email, username, firstName, lastName);
+			{ u2.Id = u1.Id; }
+			Assert.IsFalse(u1.AreEqual(u2));
+		}
 
-		//		bool flag = false;
-		//		//deliberate invalid username
-		//		User u = new User("johndoe@gmail.com", "", "John", "Doe");
-		//		try
-		//		{
-		//			u.Validate();
-		//		}
-		//		catch (InvalidUsernameException e)
-		//		{
-		//			flag = true;
-		//		}
 
-		//		//the expected exception was caught
-		//		Assert.IsTrue(flag);
-		//	}
+
+        [TestMethod]
+        public void TestValidateInvalidUsername()
+        {
+
+
+            //deliberate invalid username
+            User u = new User("johndoe@gmail.com", "", "John", "Doe");
+            Assert.IsFalse(u.Validate());
+
+        }
+		[TestMethod]
+		public void TestValidate()
+		{
+
+
+			//valid user
+			User u = new User("johndoe@gmail.com", "jdoe", "John", "Doe");
+			Assert.IsTrue(u.Validate());
+
+		}
 	}
 }

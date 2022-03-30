@@ -8,7 +8,6 @@ namespace Domain.Entities
 	{
 
 		public DateTime lastloginDttm { get; }
-		public DateTime registeredDttm { get; }
 		public MailAddress Email { get; set; }
 		public string Username { get; set; }
 		public virtual ICollection<Blab> Blabs { get; set; }
@@ -39,17 +38,29 @@ namespace Domain.Entities
 			return FirstName + " " + LastName;
 		}
 
-        public override void AreEqual(IEntity entity)
+		//doesn't check any of the datetime fields, but if two users have the same Id but different creation datetimes you have bigger problems.
+        public override bool AreEqual(IEntity entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+				User u = (User)entity;
+				if (this.Id != u.Id) return false;
+				if (this.Email.ToString() != u.Email.ToString()) return false;
+				if (this.Username != u.Username) return false;
+				if (this.FirstName != u.FirstName) return false;
+				if (this.LastName != u.LastName) return false;
+				return true;
+			}
+			catch {
+				return false;
+            }
         }
 
-        public override void Validate()
+        public override bool Validate()
         {
-			//TODO email exists (this should not be initializable otherwise, so maybe unnecessary?)
-			//TODO valid email
-			//TODO username exists
-            throw new NotImplementedException();
+			//email verification is handled by the MailAddress class so we don't need it here
+			if (this.Username == null || this.Username == "") return false;
+			return true;
         }
 
         

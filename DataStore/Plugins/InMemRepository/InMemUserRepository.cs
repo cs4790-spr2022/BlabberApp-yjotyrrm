@@ -6,23 +6,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStore.Plugins.InMemRepository
+namespace BlabberApp.DataStore.Plugins
 {
-    class InMemUserRepository : IUserRepository
+    public class InMemUserRepository : IUserRepository
     {
         private List<User> _buf;
 
+        public InMemUserRepository()
+        {
+            _buf = new List<User>();
+        }
+
         public void Add(User entity)
         {
-            try
+            if(entity.Validate())
             {
-                entity.Validate();
+                _buf.Add(entity);
             }
-            catch
-            {
+            else
+            { 
                 throw new Exception("Invalid User");
             }
-            _buf.Add(entity);
+            
             
         }
 
@@ -77,14 +82,16 @@ namespace DataStore.Plugins.InMemRepository
             {
                 throw new Exception("Invalid User Update");
             }
+            
             foreach (User u in _buf)
             {
                 if (entity.Id.Equals(u.Id))
                 {
                     _buf.Remove(u);
                     _buf.Add(entity);
+                    return;
                 }
-            }
+            }          
 
             throw new Exception("Not found");
         }

@@ -4,6 +4,7 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\DataStore\DataStore.csproj" />
   </ItemGroup>
+
   
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>

@@ -2,9 +2,9 @@
 {
     public interface IEntity
     {
-        public void AreEqual(IEntity entity);
-        public void Validate();
+        public bool AreEqual(IEntity entity);
+        public bool Validate();
         public DateTime DttmCreated { get; set; }
-        public DateTime DttmModified { get; set; }
+        public DateTime? DttmModified { get; set; }
     }
 }

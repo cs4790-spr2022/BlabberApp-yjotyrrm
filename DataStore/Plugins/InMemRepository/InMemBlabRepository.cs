@@ -51,6 +51,7 @@ namespace BlabberApp.DataStore.Plugins
                 {
                     _buf.Remove(b);
                     _buf.Add(blab);
+                    return;
                 }
             }
             throw new Exception("Not Found");

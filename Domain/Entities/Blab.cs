@@ -7,9 +7,9 @@ namespace Domain.Entities
     {
         public string? Content { get; set; }
 
-        public string User { get; set; }
+        public User User { get; set; }
 
-        public Blab(string _user, string _Content)
+        public Blab(User _user, string _Content)
         {
             User =  _user;
             Content = _Content;
@@ -20,17 +20,30 @@ namespace Domain.Entities
             return Id;
         }
 
-        override public void AreEqual(IEntity blab)
+        override public bool AreEqual(IEntity blab)
         {
-            throw new NotImplementedException();
+            Blab other;
+            try
+            {
+                other = (Blab)blab;
+            }
+            catch
+            {
+                return false;
+            }
+            if (!this.User.AreEqual(other.User)) return false;
+            if (this.Content != other.Content) return false;
+            return true;
         }
 
-        override public void Validate()
+        override public bool Validate()
         {
-            // TODO content exists
-            // TODO a user exists
-            // throw new InvalidDataException("Blab");
-            throw new NotImplementedException();
+            if (!User.Validate()) return false;
+            //twitter clone business restriction, also to make sure that I don't cause problems for my sql where the content is only a varchar(128)
+            if (this.Content.Length > 128) return false;
+            if (this.Content == null) return false;
+            if (this.Content == "") return false;
+            return true;
         }
     }
 }
