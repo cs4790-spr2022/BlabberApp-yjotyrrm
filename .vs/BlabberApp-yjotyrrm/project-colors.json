@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "78e9c47c-6102-4995-9c72-973d284b0360": {
+      "ProjectGuid": "78e9c47c-6102-4995-9c72-973d284b0360",
+      "DisplayName": "DataStoreTest",
+      "ColorIndex": 0
+    },
+    "2f83f7fe-b47c-4dc3-82ef-8e42a67d746e": {
+      "ProjectGuid": "2f83f7fe-b47c-4dc3-82ef-8e42a67d746e",
+      "DisplayName": "Domain",
+      "ColorIndex": 1
+    },
+    "11b4d902-5b47-4978-a114-570e34e5acbd": {
+      "ProjectGuid": "11b4d902-5b47-4978-a114-570e34e5acbd",
+      "DisplayName": "DataStore",
+      "ColorIndex": 2
+    },
+    "4828a3af-6ff4-44b8-ba1c-79d2a979fff1": {
+      "ProjectGuid": "4828a3af-6ff4-44b8-ba1c-79d2a979fff1",
+      "DisplayName": "Client",
+      "ColorIndex": 3
+    },
+    "063bd72e-b555-4f34-aa79-b4fff22533e6": {
+      "ProjectGuid": "063bd72e-b555-4f34-aa79-b4fff22533e6",
+      "DisplayName": "DomainTest",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

@@ -1,0 +1,1524 @@
+{
+  "DataStore.dll": {
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\DataStore\\Plugins\\InMemRepository\\InMemBlabRepository.cs": {
+      "BlabberApp.DataStore.Plugins.InMemBlabRepository": {
+        "System.Int32 BlabberApp.DataStore.Plugins.InMemBlabRepository::Count()": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.InMemBlabRepository::Add(Domain.Entities.Blab)": {
+          "Lines": {
+            "20": 4,
+            "21": 4,
+            "22": 4
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<Domain.Entities.Blab> BlabberApp.DataStore.Plugins.InMemBlabRepository::GetAll()": {
+          "Lines": {
+            "25": 2,
+            "26": 2,
+            "27": 2
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Blab BlabberApp.DataStore.Plugins.InMemBlabRepository::GetById(System.Guid)": {
+          "Lines": {
+            "30": 3,
+            "31": 12,
+            "32": 3,
+            "33": 6,
+            "34": 0,
+            "35": 0,
+            "36": 3
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 54,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            },
+            {
+              "Line": 33,
+              "Offset": 40,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 33,
+              "Offset": 40,
+              "EndOffset": 46,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 54,
+              "EndOffset": 56,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void BlabberApp.DataStore.Plugins.InMemBlabRepository::Update(Domain.Entities.Blab)": {
+          "Lines": {
+            "39": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 0,
+            "45": 0,
+            "48": 4,
+            "49": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "56": 0,
+            "57": 0,
+            "58": 1
+          },
+          "Branches": [
+            {
+              "Line": 48,
+              "Offset": 110,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 50,
+              "Offset": 71,
+              "EndOffset": 73,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 50,
+              "Offset": 71,
+              "EndOffset": 102,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 110,
+              "EndOffset": 112,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void BlabberApp.DataStore.Plugins.InMemBlabRepository::Remove(Domain.Entities.Blab)": {
+          "Lines": {
+            "61": 1,
+            "62": 1,
+            "63": 1
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.InMemBlabRepository::RemoveAll()": {
+          "Lines": {
+            "66": 0,
+            "67": 0,
+            "68": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<Domain.Entities.Blab> BlabberApp.DataStore.Plugins.InMemBlabRepository::GetByUser(Domain.Entities.User)": {
+          "Lines": {
+            "70": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<Domain.Entities.Blab> BlabberApp.DataStore.Plugins.InMemBlabRepository::GetByDateTime(System.DateTime)": {
+          "Lines": {
+            "71": 0
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.InMemBlabRepository::.ctor()": {
+          "Lines": {
+            "12": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\DataStore\\Plugins\\InMemRepository\\InMemUserRepository.cs": {
+      "BlabberApp.DataStore.Plugins.InMemUserRepository": {
+        "System.Void BlabberApp.DataStore.Plugins.InMemUserRepository::Add(Domain.Entities.User)": {
+          "Lines": {
+            "21": 5,
+            "22": 5,
+            "23": 4,
+            "24": 4,
+            "25": 4,
+            "27": 1,
+            "28": 1,
+            "32": 4
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 22,
+              "Offset": 9,
+              "EndOffset": 28,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<Domain.Entities.User> BlabberApp.DataStore.Plugins.InMemUserRepository::GetAll()": {
+          "Lines": {
+            "35": 2,
+            "36": 2,
+            "37": 2
+          },
+          "Branches": []
+        },
+        "Domain.Entities.User BlabberApp.DataStore.Plugins.InMemUserRepository::GetByEmail(System.String)": {
+          "Lines": {
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.User BlabberApp.DataStore.Plugins.InMemUserRepository::GetById(System.Guid)": {
+          "Lines": {
+            "45": 3,
+            "46": 12,
+            "47": 3,
+            "48": 3,
+            "49": 3,
+            "50": 3,
+            "52": 0,
+            "54": 0,
+            "55": 3
+          },
+          "Branches": [
+            {
+              "Line": 46,
+              "Offset": 55,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            },
+            {
+              "Line": 48,
+              "Offset": 40,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 48,
+              "Offset": 40,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 46,
+              "Offset": 55,
+              "EndOffset": 57,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.User BlabberApp.DataStore.Plugins.InMemUserRepository::GetByUsername(System.String)": {
+          "Lines": {
+            "58": 0,
+            "59": 0
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.InMemUserRepository::Remove(Domain.Entities.User)": {
+          "Lines": {
+            "63": 2,
+            "64": 2,
+            "65": 1,
+            "66": 1,
+            "68": 1
+          },
+          "Branches": [
+            {
+              "Line": 64,
+              "Offset": 18,
+              "EndOffset": 20,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 64,
+              "Offset": 18,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void BlabberApp.DataStore.Plugins.InMemUserRepository::RemoveAll()": {
+          "Lines": {
+            "71": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.InMemUserRepository::Update(Domain.Entities.User)": {
+          "Lines": {
+            "76": 1,
+            "78": 1,
+            "79": 1,
+            "80": 1,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "86": 4,
+            "87": 1,
+            "88": 1,
+            "89": 1,
+            "90": 1,
+            "91": 1,
+            "92": 1,
+            "94": 0,
+            "96": 0,
+            "97": 1
+          },
+          "Branches": [
+            {
+              "Line": 86,
+              "Offset": 110,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 88,
+              "Offset": 71,
+              "EndOffset": 73,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 88,
+              "Offset": 71,
+              "EndOffset": 102,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 86,
+              "Offset": 110,
+              "EndOffset": 112,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void BlabberApp.DataStore.Plugins.InMemUserRepository::.ctor()": {
+          "Lines": {
+            "15": 6,
+            "16": 6,
+            "17": 6,
+            "18": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\DataStore\\Plugins\\MySqlPlugin.cs": {
+      "BlabberApp.DataStore.Plugins.MySqlPlugin": {
+        "System.Void BlabberApp.DataStore.Plugins.MySqlPlugin::TestConnection()": {
+          "Lines": {
+            "18": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "28": 1
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlPlugin::Dispose()": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlPlugin::.ctor(System.String)": {
+          "Lines": {
+            "9": 17,
+            "10": 17,
+            "11": 17,
+            "12": 16
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\DataStore\\Plugins\\MySqlRepository\\MySqlBlabRepository.cs": {
+      "BlabberApp.DataStore.Plugins.MySqlBlabRepository": {
+        "System.Void BlabberApp.DataStore.Plugins.MySqlBlabRepository::Add(Domain.Entities.Blab)": {
+          "Lines": {
+            "29": 2,
+            "31": 2,
+            "32": 2,
+            "33": 2,
+            "35": 2,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "47": 2,
+            "48": 2,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "56": 2,
+            "57": 2,
+            "58": 2,
+            "59": 2
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 32,
+              "Offset": 23,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 35,
+              "Offset": 58,
+              "EndOffset": 63,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 35,
+              "Offset": 58,
+              "EndOffset": 327,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<Domain.Entities.Blab> BlabberApp.DataStore.Plugins.MySqlBlabRepository::GetAll()": {
+          "Lines": {
+            "62": 1,
+            "63": 1,
+            "64": 1,
+            "65": 1,
+            "67": 1,
+            "69": 1,
+            "71": 1,
+            "73": 1,
+            "74": 1,
+            "77": 1,
+            "78": 9,
+            "79": 3,
+            "80": 3,
+            "81": 3,
+            "82": 1,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "89": 1,
+            "90": 1
+          },
+          "Branches": [
+            {
+              "Line": 63,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 63,
+              "Offset": 22,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 78,
+              "Offset": 163,
+              "EndOffset": 125,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            },
+            {
+              "Line": 78,
+              "Offset": 163,
+              "EndOffset": 165,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            }
+          ]
+        },
+        "Domain.Entities.Blab BlabberApp.DataStore.Plugins.MySqlBlabRepository::GetById(System.Guid)": {
+          "Lines": {
+            "93": 1,
+            "95": 1,
+            "96": 1,
+            "97": 1,
+            "98": 1,
+            "99": 1,
+            "100": 1,
+            "101": 1,
+            "102": 1,
+            "103": 1,
+            "104": 1,
+            "105": 1,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "114": 1,
+            "115": 1,
+            "116": 1,
+            "117": 1
+          },
+          "Branches": [
+            {
+              "Line": 96,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 96,
+              "Offset": 23,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlBlabRepository::Update(Domain.Entities.Blab)": {
+          "Lines": {
+            "120": 0,
+            "121": 0
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlBlabRepository::Remove(Domain.Entities.Blab)": {
+          "Lines": {
+            "125": 0,
+            "126": 0
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlBlabRepository::RemoveAll()": {
+          "Lines": {
+            "130": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0
+          },
+          "Branches": [
+            {
+              "Line": 133,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 133,
+              "Offset": 23,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<Domain.Entities.Blab> BlabberApp.DataStore.Plugins.MySqlBlabRepository::GetByUser(Domain.Entities.User)": {
+          "Lines": {
+            "151": 0,
+            "152": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<Domain.Entities.Blab> BlabberApp.DataStore.Plugins.MySqlBlabRepository::GetByDateTime(System.DateTime)": {
+          "Lines": {
+            "156": 0,
+            "157": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Blab BlabberApp.DataStore.Plugins.MySqlBlabRepository::BlabFromDataRow(System.Data.DataRow)": {
+          "Lines": {
+            "165": 4,
+            "166": 4,
+            "167": 4,
+            "168": 4,
+            "169": 4,
+            "171": 4,
+            "172": 4,
+            "173": 3,
+            "174": 1,
+            "175": 1,
+            "176": 1,
+            "177": 1,
+            "178": 4,
+            "179": 4,
+            "180": 4
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlBlabRepository::.ctor(System.String,BlabberApp.Domain.Common.Interfaces.IUserRepository)": {
+          "Lines": {
+            "18": 4,
+            "21": 4,
+            "22": 4,
+            "23": 4,
+            "24": 4,
+            "25": 4,
+            "26": 4
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlBlabRepository::.cctor()": {
+          "Lines": {
+            "16": 1,
+            "17": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\DataStore\\Plugins\\MySqlRepository\\MySqlUserRepository.cs": {
+      "BlabberApp.DataStore.Plugins.MySqlUserRepository": {
+        "System.Void BlabberApp.DataStore.Plugins.MySqlUserRepository::Add(Domain.Entities.User)": {
+          "Lines": {
+            "30": 6,
+            "32": 6,
+            "33": 6,
+            "34": 6,
+            "35": 6,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "41": 5,
+            "42": 5,
+            "43": 5,
+            "44": 5,
+            "47": 6,
+            "48": 6,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "56": 6,
+            "57": 6,
+            "58": 6,
+            "59": 6
+          },
+          "Branches": [
+            {
+              "Line": 33,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 6
+            },
+            {
+              "Line": 33,
+              "Offset": 23,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 35,
+              "Offset": 58,
+              "EndOffset": 63,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 35,
+              "Offset": 58,
+              "EndOffset": 421,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 5
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<Domain.Entities.User> BlabberApp.DataStore.Plugins.MySqlUserRepository::GetAll()": {
+          "Lines": {
+            "62": 1,
+            "63": 1,
+            "64": 1,
+            "65": 1,
+            "67": 1,
+            "69": 1,
+            "71": 1,
+            "73": 1,
+            "74": 1,
+            "77": 1,
+            "78": 5,
+            "79": 1,
+            "80": 1,
+            "81": 1,
+            "82": 1,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "89": 1,
+            "90": 1
+          },
+          "Branches": [
+            {
+              "Line": 63,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 63,
+              "Offset": 22,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 78,
+              "Offset": 163,
+              "EndOffset": 125,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 78,
+              "Offset": 163,
+              "EndOffset": 165,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            }
+          ]
+        },
+        "Domain.Entities.User BlabberApp.DataStore.Plugins.MySqlUserRepository::GetByEmail(System.String)": {
+          "Lines": {
+            "93": 8,
+            "95": 8,
+            "96": 8,
+            "97": 8,
+            "98": 8,
+            "99": 8,
+            "100": 8,
+            "101": 8,
+            "102": 8,
+            "103": 8,
+            "104": 8,
+            "105": 8,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "114": 8,
+            "115": 8,
+            "116": 8,
+            "117": 8
+          },
+          "Branches": [
+            {
+              "Line": 96,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 8
+            },
+            {
+              "Line": 96,
+              "Offset": 23,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 8
+            }
+          ]
+        },
+        "Domain.Entities.User BlabberApp.DataStore.Plugins.MySqlUserRepository::GetById(System.Guid)": {
+          "Lines": {
+            "120": 1,
+            "122": 1,
+            "123": 1,
+            "124": 1,
+            "125": 1,
+            "126": 1,
+            "127": 1,
+            "128": 1,
+            "129": 1,
+            "130": 1,
+            "131": 1,
+            "132": 1,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "141": 1,
+            "142": 1,
+            "143": 1,
+            "144": 1
+          },
+          "Branches": [
+            {
+              "Line": 123,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 123,
+              "Offset": 23,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "Domain.Entities.User BlabberApp.DataStore.Plugins.MySqlUserRepository::GetByUsername(System.String)": {
+          "Lines": {
+            "147": 0,
+            "148": 0
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlUserRepository::Remove(Domain.Entities.User)": {
+          "Lines": {
+            "152": 0,
+            "153": 0
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlUserRepository::RemoveAll()": {
+          "Lines": {
+            "157": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0
+          },
+          "Branches": [
+            {
+              "Line": 160,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 160,
+              "Offset": 23,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlUserRepository::Update(Domain.Entities.User)": {
+          "Lines": {
+            "178": 0,
+            "179": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.User BlabberApp.DataStore.Plugins.MySqlUserRepository::UserFromDataRow(System.Data.DataRow)": {
+          "Lines": {
+            "183": 12,
+            "185": 12,
+            "186": 12,
+            "187": 12,
+            "188": 12,
+            "190": 12,
+            "191": 12,
+            "192": 12,
+            "193": 12
+          },
+          "Branches": [
+            {
+              "Line": 190,
+              "Offset": 140,
+              "EndOffset": 142,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 12
+            },
+            {
+              "Line": 190,
+              "Offset": 140,
+              "EndOffset": 153,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlUserRepository::.ctor(System.String)": {
+          "Lines": {
+            "21": 9,
+            "23": 9,
+            "24": 9,
+            "25": 9,
+            "26": 9,
+            "27": 9
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.DataStore.Plugins.MySqlUserRepository::.cctor()": {
+          "Lines": {
+            "18": 1,
+            "20": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\DataStore\\Exception\\NotFoundException.cs": {
+      "DataStore.Exceptions.NotFoundException": {
+        "System.Void DataStore.Exceptions.NotFoundException::.ctor(System.String)": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\DataStore\\Exception\\BlabAdapterExceptions.cs": {
+      "DataStore.exception.BlabAdapterException": {
+        "System.Void DataStore.exception.BlabAdapterException::.ctor(System.String)": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataStore.exception.BlabAdapterException::.ctor(System.String,System.Exception)": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      },
+      "DataStore.exception.BlabAdapterNotFoundException": {
+        "System.Void DataStore.exception.BlabAdapterNotFoundException::.ctor(System.String)": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataStore.exception.BlabAdapterNotFoundException::.ctor(System.String,System.Exception)": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\DataStore\\Exception\\UserAdapterExceptions.cs": {
+      "DataStore.exception.UserAdapterException": {
+        "System.Void DataStore.exception.UserAdapterException::.ctor()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataStore.exception.UserAdapterException::.ctor(System.String)": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataStore.exception.UserAdapterException::.ctor(System.String,System.Exception)": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataStore.exception.UserAdapterException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "Domain.dll": {
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\Domain\\GeneralExceptions.cs": {
+      "Domain.InvalidUsernameException": {
+        "System.Void Domain.InvalidUsernameException::.ctor()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.InvalidUsernameException::.ctor(System.String)": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.InvalidUsernameException::.ctor(System.String,System.Exception)": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.InvalidUsernameException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      },
+      "Domain.InvalidContentException": {
+        "System.Void Domain.InvalidContentException::.ctor()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.InvalidContentException::.ctor(System.String)": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.InvalidContentException::.ctor(System.String,System.Exception)": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.InvalidContentException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\Domain\\Entities\\Blab.cs": {
+      "Domain.Entities.Blab": {
+        "System.String Domain.Entities.Blab::get_Content()": {
+          "Lines": {
+            "8": 20
+          },
+          "Branches": []
+        },
+        "Domain.Entities.User Domain.Entities.Blab::get_User()": {
+          "Lines": {
+            "10": 14
+          },
+          "Branches": []
+        },
+        "System.Guid Domain.Entities.Blab::GetId()": {
+          "Lines": {
+            "19": 3,
+            "20": 3,
+            "21": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean Domain.Entities.Blab::AreEqual(BlabberApp.Domain.Common.Interfaces.IEntity)": {
+          "Lines": {
+            "24": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 40,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 40,
+              "EndOffset": 46,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 65,
+              "EndOffset": 67,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 65,
+              "EndOffset": 71,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean Domain.Entities.Blab::Validate()": {
+          "Lines": {
+            "40": 1,
+            "41": 1,
+            "43": 1,
+            "44": 1,
+            "45": 1,
+            "46": 1,
+            "47": 1
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 17,
+              "EndOffset": 23,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 43,
+              "Offset": 43,
+              "EndOffset": 45,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 43,
+              "EndOffset": 49,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 44,
+              "Offset": 60,
+              "EndOffset": 62,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 60,
+              "EndOffset": 66,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 45,
+              "Offset": 86,
+              "EndOffset": 88,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 86,
+              "EndOffset": 92,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void Domain.Entities.Blab::.ctor(Domain.Entities.User,System.String)": {
+          "Lines": {
+            "12": 11,
+            "13": 11,
+            "14": 11,
+            "15": 11,
+            "16": 11
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\Domain\\Entities\\User.cs": {
+      "Domain.Entities.User": {
+        "System.DateTime Domain.Entities.User::get_lastloginDttm()": {
+          "Lines": {
+            "10": 6
+          },
+          "Branches": []
+        },
+        "System.Net.Mail.MailAddress Domain.Entities.User::get_Email()": {
+          "Lines": {
+            "11": 46
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.User::get_Username()": {
+          "Lines": {
+            "12": 58
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Blab> Domain.Entities.User::get_Blabs()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Guid Domain.Entities.User::GetId()": {
+          "Lines": {
+            "25": 3,
+            "26": 3,
+            "27": 3
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.User::get_LastName()": {
+          "Lines": {
+            "28": 45
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.User::get_FirstName()": {
+          "Lines": {
+            "29": 46
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.User::GetFullNameLastFirst()": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.User::GetFullNameFirstLast()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Domain.Entities.User::AreEqual(BlabberApp.Domain.Common.Interfaces.IEntity)": {
+          "Lines": {
+            "43": 4,
+            "45": 4,
+            "46": 4,
+            "47": 4,
+            "48": 4,
+            "49": 4,
+            "50": 4,
+            "51": 4,
+            "52": 4,
+            "54": 0,
+            "55": 0,
+            "57": 4
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 28,
+              "EndOffset": 30,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 28,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 48,
+              "Offset": 63,
+              "EndOffset": 65,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 63,
+              "EndOffset": 69,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            },
+            {
+              "Line": 49,
+              "Offset": 90,
+              "EndOffset": 92,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 90,
+              "EndOffset": 96,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 4
+            },
+            {
+              "Line": 50,
+              "Offset": 117,
+              "EndOffset": 119,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 117,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 4
+            },
+            {
+              "Line": 51,
+              "Offset": 144,
+              "EndOffset": 146,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 51,
+              "Offset": 144,
+              "EndOffset": 150,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 4
+            }
+          ]
+        },
+        "System.Boolean Domain.Entities.User::Validate()": {
+          "Lines": {
+            "60": 7,
+            "62": 8,
+            "63": 6,
+            "64": 7
+          },
+          "Branches": [
+            {
+              "Line": 62,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 7
+            },
+            {
+              "Line": 62,
+              "Offset": 7,
+              "EndOffset": 27,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 62,
+              "Offset": 30,
+              "EndOffset": 32,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 62,
+              "Offset": 30,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            }
+          ]
+        },
+        "System.Void Domain.Entities.User::.ctor(System.String,System.String,System.String,System.String)": {
+          "Lines": {
+            "15": 30,
+            "16": 30,
+            "17": 30,
+            "18": 30,
+            "19": 30,
+            "20": 30,
+            "22": 30
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yjotyrrm\\Documents\\spring 2022\\cs 4790\\BlabberApp-yjotyrrm\\Domain\\Entities\\BaseEntity.cs": {
+      "BlabberApp.Domain.Entities.BaseEntity": {
+        "System.Guid BlabberApp.Domain.Entities.BaseEntity::get_Id()": {
+          "Lines": {
+            "10": 100
+          },
+          "Branches": []
+        },
+        "System.DateTime BlabberApp.Domain.Entities.BaseEntity::get_DttmCreated()": {
+          "Lines": {
+            "11": 72
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> BlabberApp.Domain.Entities.BaseEntity::get_DttmModified()": {
+          "Lines": {
+            "12": 28
+          },
+          "Branches": []
+        },
+        "System.Void BlabberApp.Domain.Entities.BaseEntity::.ctor()": {
+          "Lines": {
+            "17": 41,
+            "18": 41,
+            "19": 41,
+            "20": 41,
+            "21": 41
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

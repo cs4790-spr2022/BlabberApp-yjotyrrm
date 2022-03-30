@@ -1,0 +1,32 @@
+﻿@page
+@model Client.Pages.UserListModel
+@{
+    ViewData["Title"] = "UserList";
+}
+
+<h1>Feed</h1>
+<div class="border bg-white">
+    <br/>
+    <div>
+        <table class="table table-striped border">
+            <tr class="table-secondary">
+                <th>@Html.DisplayNameFor(m => m.Users[0].Email)</th>
+                <th>@Html.DisplayNameFor(m => m.Users[0].DttmCreated)</th>
+                <th>@Html.DisplayNameFor(m => m.Users[0].Username)</th>
+                <th>@Html.DisplayNameFor(m => m.Users[0].FirstName)</th>
+                <th>@Html.DisplayNameFor(m => m.Users[0].LastName)</th>
+            </tr>
+            @foreach (var user in Model.Users)
+            {
+                string e = user.Email.ToString();
+                <tr>
+                    <td>@Html.DisplayFor(m => e)</td>
+                    <td>@Html.DisplayFor(m => user.DttmCreated)</td>
+                    <td>@Html.DisplayFor(m => user.Username)</td>
+                    <td>@Html.DisplayFor(m => user.FirstName)</td>
+                    <td>@Html.DisplayFor(m => user.LastName)</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
