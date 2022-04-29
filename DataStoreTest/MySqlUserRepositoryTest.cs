@@ -76,6 +76,42 @@ namespace DataStoreTest
         }
 
         [DataTestMethod]
+        [DataRow("4ec08c9f-7cfd-4421-b249-6f16948fc893", "2022-03-30 03:27:53", "sample@gmail.com", "sample", "sample", "sampleman")]
+        public void TestRemove(string sys_id, string dttm_created, string email, string username, string first_name, string last_name)
+        {
+            //arrange
+            MySqlCommand _cmd = new MySqlCommand();
+            _cmd.Connection = this.Conn;
+            if (_cmd.Connection.State == ConnectionState.Closed)
+            {
+                _cmd.Connection.Open();
+            }
+            _cmd.CommandText = $"insert into rontene.users (sys_id, dttm_created, email, username, first_name, last_name) values('{sys_id}', '{dttm_created}', '{email}', '{username}', '{first_name}', '{last_name}')";
+            _cmd.ExecuteNonQuery();
+            _cmd.Connection.Close();
+
+            User e = new User(email, username, first_name, last_name);
+            { e.Id = new Guid(sys_id); e.DttmCreated = DateTime.Parse(dttm_created); }
+            //act
+            _repo.Remove(e);
+            //assert
+            if (_cmd.Connection.State == ConnectionState.Closed)
+            {
+                _cmd.Connection.Open();
+            }
+            _cmd.CommandText = $"select * from rontene.users where sys_id = '{e.Id}'";
+            var reader = _cmd.ExecuteReader();
+            _cmd.Connection.Close();
+            DataTable dt = new();
+            dt.Load(reader);
+            reader.Close();
+            _cmd.Connection.Close();
+
+            Assert.AreEqual(0, dt.Rows.Count);
+        }
+
+
+        [DataTestMethod]
         [DataRow("b8fc3919-80f5-450f-9030-c3b32a24d061", "2022-03-30 03:27:53", "addtest@gmail.com", "addtest", "addtest", "addtest")]
         public void TestAdd(string sys_id, string dttm_created, string email, string username, string first_name, string last_name)
         {
@@ -102,6 +138,37 @@ namespace DataStoreTest
             var a = _repo.UserFromDataRow(dt.Rows[0]);
             //assert
             //we could probaby test whether the Ids are the same, but to make 100% sure it is actually getting data from SQL I'll test on something I didn't give it.
+            Assert.IsTrue(e.AreEqual(a));
+        }
+
+        [DataTestMethod]
+        [DataRow("b8fc3919-80f5-450f-9030-c3b32a24d061", "2022-03-30 03:27:53", "addtest@gmail.com", "addtest", "addtest", "addtest")]
+        public void TestUpdate(string sys_id, string dttm_created, string email, string username, string first_name, string last_name)
+        {
+            //arrange
+            User e = new User(email, username, first_name, last_name);
+            { e.Id = new Guid(sys_id); e.DttmCreated = DateTime.Parse(dttm_created); }
+            _repo.Add(e);
+            //act
+            e.FirstName = "changedfirstname";
+            _repo.Update(e);
+
+            MySqlCommand _cmd = new MySqlCommand();
+            _cmd.Connection = this.Conn;
+            if (_cmd.Connection.State == ConnectionState.Closed)
+            {
+                _cmd.Connection.Open();
+            }
+            _cmd.CommandText = $"select sys_id, dttm_created, dttm_lastlogin, email, username, first_name, last_name from " +
+                $"rontene.users where sys_id = '{sys_id}'";
+            var reader = _cmd.ExecuteReader();
+            DataTable dt = new();
+            dt.Load(reader);
+            reader.Close();
+            _cmd.Connection.Close();
+
+            var a = _repo.UserFromDataRow(dt.Rows[0]);
+            //assert
             Assert.IsTrue(e.AreEqual(a));
         }
 

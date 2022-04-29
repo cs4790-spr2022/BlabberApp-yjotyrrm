@@ -1,5 +1,6 @@
 ﻿using BlabberApp.DataStore.Plugins;
 using BlabberApp.Domain.Common.Interfaces;
+using DataStore.Exceptions;
 using Domain.Entities;
 using MySql.Data.MySqlClient;
 using System;
@@ -13,7 +14,6 @@ namespace BlabberApp.DataStore.Plugins
 {
     public class MySqlUserRepository : MySqlPlugin, IUserRepository
     {
-        private readonly MySqlCommand _cmd;
         //I do not like hardcoding this in a non-centralized file.  TBname is inevitable, but maybe dbname should move to DSN.cs
         private static string _dbname = "`rontene`";
         //I would call it user for consistency but that's an SQL reserved keyword
@@ -22,12 +22,13 @@ namespace BlabberApp.DataStore.Plugins
 
         public MySqlUserRepository(string connStr) : base(connStr)
         {
-            _cmd = new MySqlCommand();
-            _cmd.Connection = this.Conn;
+
         }
 
         public void Add(User entity)
         {
+            var _cmd = new MySqlCommand();
+            _cmd.Connection = this.Conn;
             try
             {
                 if (_cmd.Connection.State == ConnectionState.Closed)
@@ -60,6 +61,8 @@ namespace BlabberApp.DataStore.Plugins
 
         public IEnumerable<User> GetAll()
         {
+            var _cmd = new MySqlCommand();
+            _cmd.Connection = this.Conn;
             if (_cmd.Connection.State == ConnectionState.Closed)
                 _cmd.Connection.Open();
             _cmd.CommandText = $"SELECT sys_id, dttm_created, dttm_lastlogin, email, username, first_name, last_name FROM {_srcname}";
@@ -85,12 +88,14 @@ namespace BlabberApp.DataStore.Plugins
                 throw new Exception("null value in user data");
             }
 
-
+            _cmd.Connection.Close();
             return buf;
         }
 
         public User GetByEmail(string email)
         {
+            var _cmd = new MySqlCommand();
+            _cmd.Connection = this.Conn;
             try
             {
                 if (_cmd.Connection.State == ConnectionState.Closed)
@@ -102,7 +107,15 @@ namespace BlabberApp.DataStore.Plugins
                 DataTable t = new();
                 t.Load(reader);
                 reader.Close();
-                return this.UserFromDataRow(t.Rows[0]);
+                if(t.Rows.Count > 0)
+                {
+                    return this.UserFromDataRow(t.Rows[0]);
+                }
+                else
+                {
+                    throw new NotFoundException("user not found");
+                }
+                
             }
             catch (MySqlException ex)
             {
@@ -118,6 +131,8 @@ namespace BlabberApp.DataStore.Plugins
 
         public User GetById(Guid Id)
         {
+            var _cmd = new MySqlCommand();
+            _cmd.Connection = this.Conn;
             try
             {
                 if (_cmd.Connection.State == ConnectionState.Closed)
@@ -129,7 +144,14 @@ namespace BlabberApp.DataStore.Plugins
                 DataTable t = new();
                 t.Load(reader);
                 reader.Close();
-                return this.UserFromDataRow(t.Rows[0]);
+                if(t.Rows.Count > 0)
+                {
+                    return this.UserFromDataRow(t.Rows[0]);
+                }
+                else
+                {
+                    throw new NotFoundException("User not found");
+                }
             }
             catch (MySqlException ex)
             {
@@ -145,12 +167,65 @@ namespace BlabberApp.DataStore.Plugins
 
         public User GetByUsername(string username)
         {
-            throw new NotImplementedException();
+            var _cmd = new MySqlCommand();
+            _cmd.Connection = this.Conn;
+            try
+            {
+                if (_cmd.Connection.State == ConnectionState.Closed)
+                    _cmd.Connection.Open();
+                _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_lastlogin, email, username, first_name, last_name " +
+                                   "FROM " + _srcname + " WHERE " + _srcname + ".`username` " +
+                                   "LIKE '" + username + "'";
+                var reader = _cmd.ExecuteReader();
+                DataTable t = new();
+                t.Load(reader);
+                reader.Close();
+                if (t.Rows.Count > 0)
+                {
+                    return this.UserFromDataRow(t.Rows[0]);
+                }
+                else
+                {
+                    throw new NotFoundException("user not found");
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(
+                    "Error " + ex.Number + " has occurred: " + ex.Message
+                );
+            }
+            finally
+            {
+                _cmd.Connection.Close();
+            }
         }
 
         public void Remove(User entity)
         {
-            throw new NotImplementedException();
+            var _cmd = new MySqlCommand();
+            _cmd.Connection = this.Conn;
+            try
+            {
+                if (_cmd.Connection.State == ConnectionState.Closed)
+                    _cmd.Connection.Open();
+                _cmd.CommandText = "DELETE " +
+                                   "FROM " + _srcname + " WHERE " + _srcname + ".`email` " +
+                                   "LIKE '" + entity.Email.ToString() + "'";
+                var reader = _cmd.ExecuteReader();
+
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(
+                    "Error " + ex.Number + " has occurred: " + ex.Message
+                );
+            }
+            finally
+            {
+                _cmd.Connection.Close();
+            }
         }
 
         public void RemoveAll()
@@ -180,7 +255,27 @@ namespace BlabberApp.DataStore.Plugins
 
         public void Update(User entity)
         {
-            throw new NotImplementedException();
+            var _cmd = new MySqlCommand();
+            _cmd.Connection = this.Conn;
+            try
+            {
+                if (_cmd.Connection.State == ConnectionState.Closed)
+                    _cmd.Connection.Open();
+
+                _cmd.CommandText = $"UPDATE {_srcname} SET email = '{entity.Email.ToString()}', username = '{entity.Username}', first_name = '{entity.FirstName}', last_name='{entity.LastName}'" +
+                    $"WHERE sys_id = '{entity.Id}'";
+                _cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(
+                    "Error " + ex.Number + " has occurred: " + ex.Message
+                );
+            }
+            finally
+            {
+                _cmd.Connection.Close();
+            }
         }
 
         public User UserFromDataRow(DataRow r)

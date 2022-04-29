@@ -1,4 +1,5 @@
 ﻿using BlabberApp.Domain.Common.Interfaces;
+using DataStore.Exceptions;
 using Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,15 @@ namespace BlabberApp.DataStore.Plugins
 
         public User GetByEmail(string email)
         {
-            throw new NotImplementedException();
+            foreach (User u in _buf)
+            {
+                if (email.Equals(u.Email.ToString()))
+                {
+                    return u;
+                }
+            }
+
+            throw new NotFoundException("not found");
         }
 
         public User GetById(Guid Id)
@@ -51,12 +60,20 @@ namespace BlabberApp.DataStore.Plugins
                 }
             }
 
-            throw new Exception("Not found");
+            throw new NotFoundException("not found");
         }
 
         public User GetByUsername(string username)
         {
-            throw new NotImplementedException();
+            foreach (User u in _buf)
+            {
+                if (username.Equals(u.Username))
+                {
+                    return u;
+                }
+            }
+
+            throw new NotFoundException("not found");
         }
 
         public void Remove(User entity)
@@ -85,7 +102,7 @@ namespace BlabberApp.DataStore.Plugins
             
             foreach (User u in _buf)
             {
-                if (entity.Id.Equals(u.Id))
+                if (entity.Email.Equals(u.Email.ToString()))
                 {
                     _buf.Remove(u);
                     _buf.Add(entity);

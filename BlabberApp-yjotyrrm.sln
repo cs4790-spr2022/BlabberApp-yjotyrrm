@@ -1,25 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainTest", "DomainTest\DomainTest.csproj", "{063BD72E-B555-4F34-AA79-B4FFF22533E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainTest", "DomainTest\DomainTest.csproj", "{063BD72E-B555-4F34-AA79-B4FFF22533E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{2F83F7FE-B47C-4DC3-82EF-8E42A67D746E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{2F83F7FE-B47C-4DC3-82EF-8E42A67D746E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStore", "DataStore\DataStore.csproj", "{11B4D902-5B47-4978-A114-570E34E5ACBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStore", "DataStore\DataStore.csproj", "{11B4D902-5B47-4978-A114-570E34E5ACBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStoreTest", "DataStoreTest\DataStoreTest.csproj", "{78E9C47C-6102-4995-9C72-973D284B0360}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStoreTest", "DataStoreTest\DataStoreTest.csproj", "{78E9C47C-6102-4995-9C72-973D284B0360}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{4828A3AF-6FF4-44B8-BA1C-79D2A979FFF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{4828A3AF-6FF4-44B8-BA1C-79D2A979FFF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{C7E66B21-8C2E-4698-978E-288DF89D3777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTest", "ApiTest\ApiTest.csproj", "{E6760195-FF0B-40B6-B3C6-96314857A9E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{063BD72E-B555-4F34-AA79-B4FFF22533E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +43,19 @@ Global
 		{4828A3AF-6FF4-44B8-BA1C-79D2A979FFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4828A3AF-6FF4-44B8-BA1C-79D2A979FFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4828A3AF-6FF4-44B8-BA1C-79D2A979FFF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E66B21-8C2E-4698-978E-288DF89D3777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E66B21-8C2E-4698-978E-288DF89D3777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E66B21-8C2E-4698-978E-288DF89D3777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E66B21-8C2E-4698-978E-288DF89D3777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6760195-FF0B-40B6-B3C6-96314857A9E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6760195-FF0B-40B6-B3C6-96314857A9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6760195-FF0B-40B6-B3C6-96314857A9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6760195-FF0B-40B6-B3C6-96314857A9E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F63FE47F-A174-4472-84F6-55BC5631C341}
 	EndGlobalSection
 EndGlobal

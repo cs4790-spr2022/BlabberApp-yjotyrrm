@@ -2,6 +2,7 @@
 using BlabberApp.Domain.Common.Interfaces;
 using System.Collections.Generic;
 using Domain.Entities;
+using DataStore.Exceptions;
 
 namespace BlabberApp.DataStore.Plugins
 {
@@ -32,7 +33,7 @@ namespace BlabberApp.DataStore.Plugins
             {
                 if (Id.Equals(blab.Id)) return blab;
             }
-            throw new Exception("Not found");
+            throw new NotFoundException("Not found");
         }
 
         public void Update(Blab blab)
